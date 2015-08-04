@@ -4,12 +4,12 @@ before_script:
 - git config --global user.email "${git_email}"
 - git config --global user.name "${git_name}"
 - git checkout master
-- git remote add scss https://github.com/TryKickoff/kickoff-scss-test.git
+- git remote add scss https://github.com/TryKickoff/scss.git
 - git fetch scss
 - git merge -s ours --no-commit scss/master
 - pwd
 - ls
-- git read-tree --prefix=./assets/src -u scss/master
+- git read-tree --prefix=assets/src/scss -u scss/master
 - pwd
 - ls
 - git commit -a -m "Imported scss as a subtree. Committed by Travis-CI [ci skip]"
