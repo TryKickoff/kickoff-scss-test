@@ -4,7 +4,7 @@ before_script:
 - git config --global user.email "${git_email}"
 - git config --global user.name "${git_name}"
 - git checkout master
-- git remote add scss git@github.com:TryKickoff/scss.git
+- git remote add scss https://github.com/TryKickoff/kickoff-scss-test.git
 - git fetch scss
 - git merge -s ours --no-commit scss/master
 - git read-tree --prefix=assets/src -u scss/master
