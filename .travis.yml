@@ -7,7 +7,11 @@ before_script:
 - git remote add scss https://github.com/TryKickoff/kickoff-scss-test.git
 - git fetch scss
 - git merge -s ours --no-commit scss/master
+- pwd
+- ls
 - git read-tree --prefix=./assets/src -u scss/master
+- pwd
+- ls
 - git commit -a -m "Imported scss as a subtree. Committed by Travis-CI [ci skip]"
 - git push https://${GH_TOKEN}@github.com/TryKickoff/kickoff-scss-test.git master
 env:
